@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Obyek 3D dengan A-Frame</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Balok -->
+      <a-box position="-2 2 -5" rotation="45 45 0" color="red"></a-box>
+      <!-- Kubus -->
+      <a-box position="2 2 -5" color="blue"></a-box>
+      <!-- Segitiga -->
+      <a-cone position="0 2 -5" radius-bottom="2" height="4" color="green"></a-cone>
+      <!-- Lingkaran -->
+      <a-circle position="-4 2 -2" radius="2" color="orange"></a-circle>
+      <!-- Tabung -->
+      <a-cylinder position="4 2 -2" radius="1" height="4" color="yellow"></a-cylinder>
+
+      <!-- Cahaya -->
+      <a-light type="ambient" color="#555"></a-light>
+      <a-light type="point" intensity="2" position="2 4 -4"></a-light>
+
+      <!-- Kamera -->
+      <a-entity camera look-controls position="0 2 0"></a-entity>
+    </a-scene>
+  </body>
+</html>
