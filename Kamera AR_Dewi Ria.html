@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kamera AR_Dewi Ria</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded vr-mode-ui="enabled: false" arjs="debugUIEnabled: false;">
+       
+        <!-- a-marker-camera membuat obyek tetap ada walau marker tidak terlihat -->
+        <a-marker-camera preset="hiro">
+            <!-- Balok -->
+            <a-box position="-2 0.25 -5" rotation="45 45 0" color="red" scale="0.5 0.5 0.5" 
+            animation="property: rotation; to: 0 405 0; loop: true; dur: 10000"></a-box>
+            <!-- Kubus -->
+            <a-box position="2 0.25 -5" color="blue" scale="0.75 0.75 0.75" 
+            animation="property: rotation; to: 0 405 0; loop: true; dur: 10000"></a-box>
+            <!-- Segitiga -->
+            <a-cone position="0 0.25 -5" radius-bottom="0.5" height="1" color="green" scale="0.35 0.35 0.35" 
+            rotation="0 90 0" animation="property: rotation; to: 0 405 0; loop: true; dur: 10000"></a-cone>
+          
+            <!-- Cahaya -->
+            <a-light type="ambient" color="#555"></a-light>
+            <a-light type="point" intensity="2" position="2 4 -4"></a-light>
+        </a-marker-camera>
+        
+        <!-- Kamera AR -->
+        <a-entity camera arjs-anchor look-controls></a-entity>
+    </a-scene>
+</body>
+</html>
+
+
+
